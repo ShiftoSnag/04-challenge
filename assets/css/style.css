@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
   }
+  /*Changes color to the background of the site*/
   body{
     background-color: #b8c6db;
     background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7f7 100%);
@@ -12,6 +13,7 @@
     overflow: hidden;
     margin: 0;
   }
+    /*Adds color to Quiz box*/
   .quiz-container{
     background-color: #fff;
     border-radius: 10px;
@@ -19,6 +21,7 @@
     width: 600px;
     overflow: hidden;
   }
+    /* Below for lines 24-43 adds style and reactions inside the Quiz Box*/
   .quiz-header{
     padding: 4rem;
   }
@@ -38,6 +41,7 @@
   ul li label{
     cursor: pointer;
   }
+    /*Submit has Color */
   button{
     background-color: #000000;
     color: #fff;
@@ -49,9 +53,12 @@
     font-family: inherit;
     padding: 1.3rem;
   }
+  
+/*Submit has Color when hovered over */
   button:hover{
     background-color: #464444;
   }
+  /*Submit button has a color change when clicked */
   button:focus{
     outline: none;
     background-color: #44b927;

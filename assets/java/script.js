@@ -1,4 +1,4 @@
-
+//Displays all Questions and the Answer
 const quizData = [
     {
         question: "Which language runs in a web browser?",
@@ -33,32 +33,7 @@ const quizData = [
         correct: "b",
     },
 ];
-var secondsLeft = 10;
-
-function setTime() {
-  // Sets interval in variable
-  var timerInterval = setInterval(function() {
-    secondsLeft--;
-    timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
-
-    if(secondsLeft === 0) {
-      // Stops execution of action at set interval
-      clearInterval(timerInterval);
-      // Calls function to create and append image
-      sendMessage();
-    }
-
-  }, 1000);
-}
-function sendMessage() {
-    timeEl.textContent = " ";
-    var imgEl = document.createElement("img");
-    imgEl.setAttribute("src", "images/image_1.jpg");
-    mainEl.appendChild(imgEl);
-  
-  }
-  
-  setTime();
+//
 const quiz= document.getElementById('quiz')
 const answerEls = document.querySelectorAll('.answer')
 const questionEl = document.getElementById('question')
@@ -79,9 +54,11 @@ function loadQuiz() {
     c_text.innerText = currentQuizData.c
     d_text.innerText = currentQuizData.d
 }
+// Deselect funtion to have the ability to Change answers
 function deselectAnswers() {
     answerEls.forEach(answerEl => answerEl.checked = false)
 }
+//Selct function to choose answers
 function getSelected() {
     let answer
     answerEls.forEach(answerEl => {
@@ -91,6 +68,7 @@ function getSelected() {
     })
     return answer
 }
+// Once finshed it displays score and a button to Retake the quiz
 submitBtn.addEventListener('click', () => {
     const answer = getSelected()
     if(answer) {
